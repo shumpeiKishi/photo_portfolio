@@ -1,0 +1,242 @@
+// Variables
+
+$h1-size: 40px;
+$h2-size: 30px;
+$h3-size: 24px;
+$h4-size: 18px;
+$base-font-size: 18px;
+// Mixins
+
+// Base
+
+html {
+  min-height: 100%
+}
+
+body {
+  min-height: 100%;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+a, a:link, a:visited {
+  color: #5e5e5e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: $h1-size;
+}
+
+h2 {
+  font-size: $h2-size;
+}
+
+h3 {
+  font-size: $h3-size;
+}
+
+h4 {
+  font-size: $h4-size;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+// Layout
+.navbar {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+.navbar-brand {
+  @extend h2;
+}
+
+.footer {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Components
+
+// Elements
+.btn-primary {
+  border: none;
+  border-radius: 2px;
+  background-color: #5e5e5e;
+  color: #ffffff
+}
+
+// Blocks
+#block-bean-sns-links {
+  float: left;
+}
+
+#block-bean-copyright {
+  float: right;
+  position: relative;
+  top: 1em;
+
+  
+}
+
+.front, .page-node-12 {
+  #page-header, #page-header .region, #block-views-slider-by-terms-block, #block-views-sliders-block-1, .view-sliders, .view-slider-by-terms, .view-content, #flexslider-1, .slides, .slides li, .views-field-field-photograph .field-content {
+    min-height: 100%;
+  }  
+}
+
+.flexslider {
+  border: none;
+  text-align: center;
+  
+  .views-field-field-photograph .field-content {
+    // height: 600px;
+    // min-height: 100%;
+    background-size: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  .views-field-field-photograph {
+    margin-bottom: 1em;
+    img {
+      display: block;
+    }
+  }
+
+  .flex-prev, .flex-next {
+    width: 25px;
+    height: 45px;
+  }
+  &:hover {
+    .flex-direction-nav {
+      a.flex-prev {
+        left: 60px;
+      }
+
+      a.flex-next {
+        right: 60px;
+      }    
+    }
+  }
+
+
+  .flex-control-thumbs {
+    display: none;
+    position: relative;
+    margin-top: -30px;
+    
+    ul {
+      text-align: center;
+      
+    }
+    li {
+      display: inline-block;
+      float: none;
+      width: auto;
+      margin-right: 12px;
+    }
+    img {
+      width: auto;
+      height: 120px;
+    }
+
+  }
+}
+.view-slider-by-terms {
+  img {
+    border: 1px solid #5e5e5e;
+  }
+  .views-field-name {
+    font-family: 'Oswald';
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1em;
+    a {
+      font-weight: 400;
+      font-size: 0.8em;
+    i {
+      font-size: 1.3em;
+      position: relative;
+      }
+    }
+  }
+}
+
+
+// States
+
+
+// // MEDIA QUERIES
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  .navbar-brand {
+    padding-left: 0;
+  }
+
+  // Content Types
+  .node {
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .node-page {
+    .field-name-field-image.field-type-image {
+      float: left;
+      padding: 0 1em 1em 0;
+    }
+  }
+
+  .front, .page-node-12 {
+    .views-field-field-photograph .field-content {
+      img {
+        display: block;
+      }
+    }  
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .flexslider .flex-control-thumbs {
+    display: block;
+  }
+
+  .front, .page-node-12 {
+    .views-field-field-photograph .field-content {
+        height: 600px;
+        img {
+          display: none;
+        }
+      }  
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+
+// Themes
